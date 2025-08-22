@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>نمایش خطوط فایل‌ها</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container" id="formPage">
+    <h1>انتخاب فایل و نمایش خطوط</h1>
+
+    <form id="fileForm">
+        <label>انتخاب فایل‌ها:</label><br>
+        <select id="fileSelect" multiple></select><br><br>
+
+        <label>تعداد خطوط:</label>
+        <input type="number" id="numLines" min="1"><br>
+
+        <label>حالت انتخاب:</label>
+        <input type="radio" name="mode" value="order" checked> ترتیبی
+        <input type="radio" name="mode" value="random"> رندوم<br>
+
+        <label>بازه خطوط:</label>
+        از <input type="number" id="fromLine" min="1">
+        تا <input type="number" id="toLine" min="1"><br><br>
+
+        <button type="button" id="showBtn">تایید</button>
+    </form>
+</div>
+
+<div class="container hidden" id="resultPage">
+    <h2>خطوط انتخاب شده:</h2>
+    <ol id="output"></ol>
+    <button id="backBtn">بازگشت</button>
+</div>
+
+<script>
+const FILES_DIR = "files/";
+</script>
+<script src="script.js"></script>
+</body>
+</html>
